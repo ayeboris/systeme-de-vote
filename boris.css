@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: content-box;
+}
+
+.container{
+    display: block;
+    margin: auto;
+    width: 95%;
+}
+
+/* BADGE : NOMBRE D'ALERTE PAR EXEMPLE */
+.badge {
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(253, 59, 59);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+/* FORMULAIRE : FORM */
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENU DU FORMULAIRE */
+.form-group{
+    padding: 10px 14px;/*Espace a l interieur du block de formulaire */
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.around{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* TITRE DU FOMULAIRE */
+.form-group .form-title{
+    font-weight: 600;
+}
+
+/* SECTION CHAMPS DU FORMULAIRES */
+.form-group .form-controle{
+    width: -webkit-fill-available;
+    display: block;
+    margin: 10px 0;
+}
+
+/* SECTION DES TYPES : INPUT - SECTION - TEXTAREA */
+.form-group .form-controle input,
+.form-group .form-controle section,
+.form-group .form-controle textarea,
+.form-group .form-controle datalist{
+    width: -webkit-fill-available;
+    padding: 10px;
+    resize: none;
+}
+
+.form-group .form-controle input[type=range]{padding: 0;}
+
+.form-group .form-controle textarea{
+    height: 65px;
+}
+
+/* POSITIONNER UN CONTENU */
+/* POSITIONNER CENTRER */
+.center-block{
+    margin: auto;
+}
+/* POSITIONNER A GAUCHE */
+.center-left{
+    margin-right: auto;
+}
+
+/* POSITIONNER A DROITE */
+.center-right{
+    margin-left: auto;
+}
+
+
+/* BOUTON : BTN */
+.btn-group{
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    /* margin-left: auto; /*PLACE A DROITE LE CONTENU*/ 
+    /*margin-right: auto;/* PLACE A GAUCHE LE CONTENU */
+}
+
+.btn{
+    display: inline-block;
+    padding: 5px 22px; 
+    font-size: medium;
+    cursor: pointer;
+    margin: 10px 0 10px;
+    outline: none;
+    border: none;
+}
+
+
+.btn-primary{
+    background-color: rgb(3, 164, 192);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+.btn-secondary{
+    background-color: rgb(212, 212, 212);
+    color: rgb(6 6 6);
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+.btn-succes{
+    background-color: rgb(9, 190, 3);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+.btn-erreur{
+    background-color: rgb(250, 48, 34);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+
+/* SECTION DES ETOILES */
+.section-etoiles{
+    transform: rotateY(180deg);
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.section-etoiles input{
+    display: none;
+}
+
+.section-etoiles label{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: url('star-regular.svg') no-repeat;
+    vertical-align: middle;
+}
+
+
+.section-etoiles label:hover,
+.section-etoiles input:checked ~ label
+{
+    background: url('star-solid.svg') no-repeat;
+}
+
+/* POUR LA REPONSE DES ETOILES */
+.section-etoiles .etoileGroupe{
+    display: flex;
+}
+.section-etoiles .reponseVides{
+    background: url('star-regular.svg') no-repeat;
+    width: 50px;
+    height: 50px;
+    /* position: absolute; */
+}
+
+.section-etoiles .reponseEtoile{
+    background: url('star-solid.svg') no-repeat;
+    width: 50px;
+    height: 50px;
+    /* position: absolute; */
+}
+

@@ -1,0 +1,14 @@
+@page
+{
+  size:A4;
+  margin: 0.5cm;
+}
+#print-btn
+{
+  display: none;
+  visibility: none;
+}
+
+@media print {
+  @import url(boris.css);
+}

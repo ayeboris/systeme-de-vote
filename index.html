@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire de saisi d'avis</title>
+	<link rel="stylesheet" href="boris.css">
+</head>
+
+<body>
+
+	<div class="container">
+
+			<form method="POST" action="traite.php" class="form">
+				
+					
+					<div class="form-group around">
+
+						<h1 class="form-title">Rediger un avis pour un produit</h1>
+
+						<h2>Votre avis</h2>
+
+						<div class="section-etoiles">
+							
+							<input type="radio" name="note" id="note1" class="notes" value="5">
+							<label for="note1" class=""></label>
+
+							<input type="radio" name="note" id="note2" class="notes" value="4">
+							<label for="note2"></label>
+
+							<input type="radio" name="note" id="note3" class="notes" value="3">
+							<label for="note3"></label>
+
+							<input type="radio" name="note" id="note4" class="notes" value="2">
+							<label for="note4"></label>
+
+							<input type="radio" name="note" id="note5" class="notes" value="1">
+							<label for="note5"></label>
+
+						</div>
+
+						<div class="form-controle">
+							<h2>Votre commentaire</h2>
+							<textarea name="commentaire" id="comment-text"></textarea>
+						</div>
+
+						<div class="form-controle">
+							<h2><label for="range">Votre soutient : 0F - 10 000F</label></h2>
+							<input name="prix" type="range" id="range" onchange="rangeSlide(this.value)" class="form-range" min="0" max="10000" step="50" value="0">
+							<span id="valeurRange" class="center-block badge" >0 FCFA</span> 
+						</div>
+
+						<!-- 	NOTE SPECIALE	 -->
+						<div class="form-controle">
+							<h2><label for="DataList" class="form-label">Votre pays</label></h2>
+							
+							<input name="pays"  list="datalistOptions" id="DataList" placeholder="Votre recherche...">
+							<datalist id="datalistOptions">
+								<option value="COTE D'IVOIRE">
+								<option value="FRANCE">
+								<option value="GHANA">
+								<option value="NIGERIA">
+								<option value="USA">
+							</datalist>
+						</div>
+
+						
+						<!-- SAISI DES BOUTONS DE SAISI -->
+						<div class="btn-group center-block">
+
+							<input type="submit" name="" value="Envoyer" class="btn btn-succes">
+
+							<input type="reset" name="" value="Anuler" class="btn btn-erreur">
+
+						</div>
+						
+
+					</div>
+
+			</form>
+	</div>
+
+	<script src="boris.js"></script>
+</body>
+
+</html>
