@@ -1,0 +1,5 @@
+# systeme-de-vote
+# systeme-de-commentaire
+
+Ce petit projet permet d'illustrer un systeme de vote ou de commentaire avec un systeme de vote etoile.
+Ce projet permet de faire un retour sur la notion des SESSIONS.
